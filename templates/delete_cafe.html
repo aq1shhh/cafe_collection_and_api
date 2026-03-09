@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Delete</title>
+</head>
+<body bgcolor="#8b0000">
+<form action="{{ url_for('Delete_Cafe',id=cafe.id) }}" method="POST">
+    <label>Input SECRET CODE</label>
+    <input type="text" name="secret_code">
+    <button type="submit">Submit</button>
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add</title>
+</head>
+<body>
+<form action="{{ url_for('add') }}" method="post">
+<label>Name</label>
+    <input type="text" name="cafe_name"/>
+    <br>
+    <label>location</label>
+    <br>
+    <input type="text" name="location">
+    <br>
+    <label>seats</label>
+    <br>
+    <input type="text" name="seats">
+    <br>
+    <label>has_wifi</label>
+    <br>
+    <input type="text" name="has_wifi">
+    <br>
+    <label>Coffee_price</label>
+    <br>
+    <input type="text" name="coffee_price">
+    <br>
+    <label>map_url</label>
+    <br>
+    <input type="url" name="map_url">
+    <br>
+    <label>Images</label>
+    <br>
+    <input type="url" name="images">
+    <br>
+    <label>Has toilet</label>
+    <br>
+    <input type="text" name="has_toilet">
+    <br>
+    <button type="submit">Add cafe</button>
+</form>
+
+</body>
+</html>

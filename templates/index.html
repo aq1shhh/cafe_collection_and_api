@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafe&Wifi API</title>
+</head>
+<body>
+    <h1>Welcome to the Cafe & Wifi API</h1>
+    <nav>
+        <a href="{{ url_for('add') }}">Add cafe</a>
+
+    </nav>
+    <table border="1">
+        <thead>
+        <tr>
+            <td>
+                Name
+            </td>
+            <td>Location</td>
+            <td>seats</td>
+            <td>Has Wifi</td>
+            <td>Coffee Price</td>
+            <td>map_url</td>
+            <td>Images</td>
+            <td>Edit_cafe</td>
+            <td>Delete_cafe</td>
+        </tr>
+        </thead>
+        {% for cafe in cafes %}
+        <tr>
+        <td>{{ cafe.name }}</td>
+        <td> {{ cafe.location }}</td>
+            <td>{{ cafe.seats }}</td>
+        <td>{{ cafe.has_wifi }}</td>
+        <td> {{ cafe.coffee_price }} </td>
+        <td><a href="{{ cafe.map_url }}" >Map location</a></td>
+        <td><img src="{{ cafe.img_url }}" style="width:100px; height:100px;"></td>
+            <td><a href="{{ url_for('edit_cafe',id=cafe.id) }}">Edit_cafe</a></td>
+            <td><a href="{{ url_for('Delete_Cafe',id=cafe.id) }}">Delete Cafe</a></td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

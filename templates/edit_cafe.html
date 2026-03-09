@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+
+    <form action="{{ url_for('edit_cafe',id=cafe.id) }}" method="post">
+        <label>Cafe name</label>
+        <input type="text" name="new_cafe_name" value="{{ cafe.name }}">
+
+        <label>Edit Location</label>
+        <input type="text" name="new_location" value="{{ cafe.location }}">
+
+        <label>Seats</label>
+        <input type="text" name="new_seats" value="{{ cafe.seats }}">
+
+        <label>has_wifi</label>
+        <input type="text" name="new_has_wifi" value="{{ cafe.has_wifi }}">
+
+
+        <label>Coffee Price</label>
+        <input type="text" name="new_coffee_price" value="{{ cafe.coffee_price }}">
+
+        <label>Map_url</label>
+        <input type="url" name="new_map_url" value="{{ cafe.map_url }}">
+
+        <label>Images</label>
+        <input type="url" name="new_img_url" value="{{ cafe.images }}">
+
+        <label>Has_toilet</label>
+        <input type="text" name="new_has_toilet" value="{{ cafe.has_toilet }}">
+        <button type="submit">Commit the Edit</button>
+
+
+    </form>
+
+
+
+
+</body>
+</html>

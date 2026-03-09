@@ -1,0 +1,261 @@
+{
+  "info": {
+    "_postman_id": "7732abd2-2a34-4742-8484-3d680fcc6ee6",
+    "name": "Cafes Api collection",
+    "description": "This is the documentation for my local Cafe list Aoi , you can use it , ill update more and you also can update more .",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "36598285",
+    "_collection_link": "https://go.postman.co/collection/36598285-7732abd2-2a34-4742-8484-3d680fcc6ee6?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000"
+        },
+        "description": "displays home page thats it"
+      },
+      "response": []
+    },
+    {
+      "name": "Search all cafes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/all",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "all"
+          ]
+        },
+        "description": "/all searches all the cafes"
+      },
+      "response": []
+    },
+    {
+      "name": "Cafe search by location",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/search?loc=Barbican",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "search"
+          ],
+          "query": [
+            {
+              "key": "loc",
+              "value": "Barbican"
+            }
+          ]
+        },
+        "description": "/search searches for location\r\n"
+      },
+      "response": []
+    },
+    {
+      "name": "Edit Cafe",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "new_cafe_name",
+              "value": "Chichiro",
+              "type": "text"
+            },
+            {
+              "key": "new_location",
+              "value": "Aashiyana",
+              "type": "text"
+            },
+            {
+              "key": "new_seats",
+              "value": "60",
+              "type": "text"
+            },
+            {
+              "key": "new_has_wifi",
+              "value": "False",
+              "type": "text"
+            },
+            {
+              "key": "new_coffee_price",
+              "value": "₹200",
+              "type": "text"
+            },
+            {
+              "key": "new_map_url",
+              "value": "https://www.google.com/maps/place/Cosmos:+Kitchen+...(truncated)",
+              "type": "text"
+            },
+            {
+              "key": "new_img_url",
+              "value": "https://www.google.com/maps/place/Cosmos:+Kitchen+...(truncated)",
+              "type": "text"
+            },
+            {
+              "key": "new_has_toilet",
+              "value": "Yes",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/edit/4",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "edit",
+            "4"
+          ]
+        },
+        "description": "/edit lets you edit cafes"
+      },
+      "response": []
+    },
+    {
+      "name": "Add Cafe",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "cafe_name",
+              "value": "Chichiro",
+              "type": "text",
+              "uuid": "8fa58111-0a9e-4e0b-9a5b-599c43122daa"
+            },
+            {
+              "key": "location",
+              "value": "Lucknow Cantt",
+              "type": "text",
+              "uuid": "88997993-f57a-4fd3-8df0-15620e5aaa92"
+            },
+            {
+              "key": "seats",
+              "value": "20-30",
+              "type": "text",
+              "uuid": "c793b7e1-21c6-434d-a9f7-5b8867425664"
+            },
+            {
+              "key": "has_wifi",
+              "value": "False",
+              "type": "text",
+              "uuid": "83b1b487-16bc-4095-a15d-ad6906596d6e"
+            },
+            {
+              "key": "coffee_price",
+              "value": "200",
+              "type": "text",
+              "uuid": "4673d1d7-727b-474f-b884-9125f261feb9"
+            },
+            {
+              "key": "map_url",
+              "value": "https://www.google.com/maps/place/Chihiro/data=!4m2!3m1!1s0x0:0xb955623639cb973d?sa=X&ved=1t:2428&ictx=111",
+              "type": "text",
+              "uuid": "0b2b4ac3-8e82-4d23-b528-6c95f8725d18"
+            },
+            {
+              "key": "images",
+              "value": "https://lh3.googleusercontent.com/p/AF1QipNBZqOYojVHG1btwmjHY-Us-VmxW8fp_FJL_vBf=s1360-w1360-h1020-rw",
+              "type": "text",
+              "uuid": "05c1c5a4-668e-4cfb-a663-5218019d5757"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/add",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "add"
+          ]
+        },
+        "description": "/add adds new cafe fill the desired info"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Cafe",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "secret_code",
+              "value": "dhqihvnvq4hv4qnvnvuv985u93ur149872cjk4bu",
+              "type": "text",
+              "uuid": "873d8860-b467-4f0a-a335-09d138affd0a"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/delete/3",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "delete",
+            "3"
+          ]
+        },
+        "description": "/delete lets you delte the cafe"
+      },
+      "response": []
+    }
+  ]
+}
